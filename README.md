@@ -1,5 +1,5 @@
 # JS_Rock-Paper-Scissors
-Rock Paper Scissor Project made with Html, Css and Javascript. (demo)  
+Rock Paper Scissor Project made with Html, Css and Javascript.   
 
 At this project, I worked with:
 - DOM at JS to manipulate html and css
