@@ -1,7 +1,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/*HEADER*/
 header{
     text-align: center;
 }
@@ -13,6 +13,7 @@ header{
     height: 40px;
 }
 
+/*GAME*/
 .game{
     display: flex;
     justify-content: space-evenly;
@@ -24,28 +25,37 @@ header{
     width: 300px;
 }
 
-.game h3{
+.game h3{                   /*Player Name*/
     margin-bottom: 0;
     margin-top: 0;
 }
 
-.score{
+.score{                     /*Score*/
     margin-top: 0;
 }
 
-.img{
-    min-height: 250px;
+.img{                       /*Image Box*/
+    min-height: 250px; 
 }
 
-.buttons{
+img{                    
+    max-width: 70%;
+    height: 70%;
+    margin: 10px;
+}
+
+.buttons{                       /*Player and computer buttons*/
     display:flex;
     justify-content: center;
     gap: 10px;
 }
 
+/*PLAY BUTTONS*/
+
 .play-container{
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .play-btn{
@@ -53,8 +63,19 @@ header{
     padding: 5px 20px;
 }
 
-img{
-    width: 70%;
-    height: 70%;
-    margin: 20px;
+.restart-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
 }
+
+.new-game{
+    margin: 50px;
+    padding: 10px;
+}
+
+.selected:focus{
+    background-color: rgb(175, 175, 175);
+    border-width: 1px;
+    border-radius: 3px;
+}
+
