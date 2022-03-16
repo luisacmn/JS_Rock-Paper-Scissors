@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll(".btn")
+const btns = document.querySelectorAll(".player-btn")
 const playerTxt = document.querySelector(".player-txt")
 const computerTxt = document.querySelector(".computer-txt")
 const pcBtns = document.querySelectorAll(".pc-btn")
@@ -55,7 +55,7 @@ function userPlay(event){
 function computerPlay() {
     const randomNumber = Math.floor(Math.random() * 3);                 //Sort a number from the array length. 
     computerSelection = hands[randomNumber];                            //This number will be the index of the array to select an item.
-    computerTxt.innerHTML="Computer chose " + computerSelection + "!";
+    computerTxt.innerHTML="PC chose " + computerSelection + "!";
 
     if(computerSelection === "Rock") {                                  //Execute different actions based on the condition
         computerImg.src="images/rock.png";
@@ -81,13 +81,17 @@ function playRound() {
         (playerSelection === "Paper" && computerSelection === "Rock") ||
         (playerSelection === "Scissors" && computerSelection === "Paper")
         ) {
-        resultTxt.innerHTML = "YOU WIN!";
+        resultTxt.innerHTML = "You WIN !";
         newScoreP++;                                            //Increment the score
         pscore.innerHTML = "Score: " + newScoreP;               //Write the new score in the selected place
     } else if (playerSelection === computerSelection) {
-        resultTxt.innerHTML = "Its a TIE!";
+        resultTxt.innerHTML = "It's a TIE !";
+        newScoreP++;
+        newScoreC++;
+        pscore.innerHTML = "Score: " + newScoreP;  
+        cscore.innerHTML = "Score: " + newScoreC;
     } else {
-        resultTxt.innerHTML = "YOU LOSE!";
+        resultTxt.innerHTML = "You LOSE !";
         newScoreC++;
         cscore.innerHTML = "Score: " + newScoreC;
     } 
@@ -108,7 +112,7 @@ function newRound(){
 function clear(){
     playerBox.removeChild(playerImg);                       //Remove player image from player box
     computerBox.removeChild(computerImg);                   //Remove computer image from computer box
-    playerTxt.innerHTML="";                                 //Remove texts by giving to these variables an empty string value
+    playerTxt.innerHTML="Choose and press play";                                 //Remove texts by giving to these variables an empty string value
     computerTxt.innerHTML="";
     resultTxt.innerHTML="";
 } 
@@ -153,7 +157,11 @@ function newGame(){
     location.reload();
 }
 
+//FOOTER
+let year = new Date().getFullYear();
+let footer = document.querySelector("footer")
 
+footer.innerHTML = year + " &copy luisacmn"
 
 
 
