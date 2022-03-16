@@ -1,16 +1,26 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    background-color: #E4F9F5;
 }
+
 /*HEADER*/
 header{
     text-align: center;
 }
 
+h1{
+    margin: 0 auto;
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px #222831;
+    color: #FCE38A
+}
+
 .main-result{
     text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
     height: 40px;
+    padding-top: 10px;
 }
 
 /*GAME*/
@@ -19,10 +29,15 @@ header{
     justify-content: space-evenly;
     text-align: center;
     height: 400px;
+    margin: 0 300px;
 }
 
 .game-box{
     width: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding-top: 15px;
 }
 
 .game h3{                   /*Player Name*/
@@ -50,27 +65,59 @@ img{
     gap: 10px;
 }
 
-/*PLAY BUTTONS*/
+.player-btn, .pc-btn{
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Urbanist', sans-serif;
+}
 
+.player-btn:hover{
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.player-txt{
+    margin-top: 15px;
+}
+
+/*PLAY BUTTONS*/
 .play-container{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.play-btn{
-    margin-top: 10px;
-    padding: 5px 20px;
-}
-
-.restart-btn{
-    margin-top: 10px;
-    padding: 5px 15px;
+.play-btn, .restart-btn{
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 8px;
+    width: 80px;
+    background-color: #F38181;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .new-game{
-    margin: 50px;
+    font-size: 16px;
+    margin: 80px auto;
     padding: 10px;
+    padding: 8px;
+    width: 150px;
+    background-color: #F38181;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.play-btn:hover, .restart-btn:hover, .new-game:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .selected:focus{
@@ -78,4 +125,14 @@ img{
     border-width: 1px;
     border-radius: 3px;
 }
+
+
+footer{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+}
+
 
